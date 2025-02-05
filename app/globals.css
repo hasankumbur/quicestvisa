@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-rgb: 255, 255, 255;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Swiper Customization */
+.testimonials-swiper {
+  padding-bottom: 3rem !important;
+}
+
+.testimonials-swiper .swiper-pagination-bullet {
+  background: theme('colors.primary.300');
+  opacity: 0.5;
+}
+
+.testimonials-swiper .swiper-pagination-bullet-active {
+  background: theme('colors.primary.500');
+  opacity: 1;
+} 

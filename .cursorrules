@@ -1,0 +1,191 @@
+## GENEL İSTEK VE KONSEPT
+
+- **Proje Tanımı**:  
+  - Modern, interaktif ve 3D öğeler içeren bir “Vize & Seyahat Danışmanlığı” temalı landing page.  
+  - Kullanıcının ilgisini çekecek animasyonlar, akıcı bir arayüz ve sezgisel bir kullanıcı deneyimi sunacak.  
+  - **visapicker.com** sitesindeki mimariyi, bölüm akışını ve kullanıcıyı yönlendirme mantığını koru; fakat **daha yüksek etkileşim**, **daha fazla animasyon** ve **daha modern 3D tasarım** ile farklılaş.
+
+- **Kullanıcı Deneyimi Hedefleri**:  
+  - Kullanıcı, ilk bakışta kendini “geleceğin seyahat & vize platformu”nda gibi hissetsin.  
+  - Mümkün olduğunca az tıklamayla, kullanıcıya “Vize seçenekleri, Nasıl Başvurulur, En Popüler Destinasyonlar, Avantajlar, Rehberler, vb.” başlıkları gösterilsin.  
+  - Vize danışmanlığı veya rehberlik hizmetlerini net, anlaşılır ve çekici şekilde tanıt.
+
+- **Tasarım & Teknoloji Önerileri**:
+  - **React** veya **Next.js** (SPA veya SSR için tercih edilebilir).  
+  - **Three.js** ya da **Babylon.js** gibi 3D kütüphaneler (özellikle interaktif 3D gezegen, şehir silüeti veya animasyonlu background efektleri için).  
+  - Animasyonlar için: **GSAP (GreenSock)**, **Framer Motion** ya da **Lottie** (vurgulu mikrosite animasyonları oluşturmak adına).  
+  - Stil kütüphaneleri: **Tailwind CSS**, **Styled Components** veya **Sass** (esnek ve modüler bir yapıda modern arayüz sunmak için).  
+  - **Responsive** ve **mobil uyumlu** tasarım.  
+  - Performans ve SEO odaklı, hızlı yüklenen ve temiz kod yapısı.
+
+---
+
+## BÖLÜM BAZLI DETAYLI İÇERİK & ANİMASYON ÖNERİLERİ
+
+Aşağıda tipik bir landing page kurgusuna göre section’lar ve bu section’larda kullanılabilecek teknoloji/animasyon/görsel yaklaşımları bulabilirsiniz:
+
+---
+
+### 1. **Hero Section (Ana Karşılama Ekranı)**
+
+- **Amaç**: Ziyaretçiyi etkileyici bir görsel ile karşılamak, site amacını 3-5 saniye içinde net olarak anlatmak.  
+- **Başlık/Metin Önerisi**:  
+  - “Dünyayı Keşfet, Vize Sürecini Kolaylaştır”  
+  - Alt açıklama: “Yüzlerce ülkeye vize, oturum ve çalışma izni seçeneklerini tek tıkla incele.”  
+- **Animasyon ve 3D Önerisi**:  
+  - Arka planda interaktif bir 3D dünya küresi (Three.js ile oluşturulabilir).  
+  - Kullanıcı farenin üzerine geldiğinde dünya küresi hafifçe dönsün veya tıklanana kadar otomatik dönen bir animasyon olsun.  
+  - Dünya küresi üzerine veya etrafına ülke bayrakları/minimal ikonlar eklenebilir, hover ile büyüyüp ufalabilir.  
+- **Teknoloji & Stil**:  
+  - Arkaplanda degrade veya neon benzeri bir geçiş (fütüristik his için).  
+  - **GSAP** ile headline metni, butonlar ve görsel elemanlarda “fade-in + scale-up” animasyonu.  
+  - “Call to Action” butonu: “Hemen Başla” / “Vize Sorgula” vb.
+
+---
+
+### 2. **Neden Biz? / Hizmetlerimiz (Features & Services)**
+
+- **Amaç**: Platformun sağladığı ana avantajları, özellikle “visapicker” benzeri vize karşılaştırma ve rehberlik özelliklerini vurgulamak.  
+- **İçerik**:  
+  - “Tek tıkla vize seçeneklerini karşılaştır.”  
+  - “Uzman danışmanlarımızla destek alın.”  
+  - “Adım adım süreç takibi.”  
+  - “Belge yönetimi, randevu takibi ve daha fazlası.”  
+- **Düzen**:  
+  - Kartlar veya sütunlar halinde hizmet başlıkları.  
+  - Her kartın üzerinde minimal bir ikon veya 3D küçük animasyon (örneğin Lottie animasyonu).  
+- **Animasyon Önerisi**:  
+  - Kartlar hover olduğunda hafif bir yükselme ve gölge efekti (GSAP veya Framer Motion).  
+  - Kaydırdıkça (scroll) gelen fade-in/slide-up animasyonları.  
+- **Teknoloji & Stil**:  
+  - Material-UI veya Tailwind CSS ile kolayca tasarlanabilir.  
+  - Renk paleti, Hero Section ile uyumlu canlı renkler içersin.
+
+---
+
+### 3. **Vize Karşılaştırma Aracı (Interactive Tool)**
+
+- **Amaç**: Kullanıcıların farklı ülkelere yönelik vize gerekliliklerini hızlıca görebilmesi.  
+- **Önerilen İşlevsellik**:  
+  - Basit bir arama formu: “Nereden Geliyorsunuz?” & “Nereye Gitmek İstiyorsunuz?”  
+  - Sonuç: Vize gereklilikleri, evrak listesi, tahmini işlem süresi, ücret vb.  
+- **Animasyon Önerisi**:  
+  - Form elementleri focus olduğunda hafif parlayan çerçeve (neon efekti).  
+  - Butona tıklandığında sonuçlar “accordion” veya “slide-down” animasyonla belirsin.  
+- **Teknoloji & Stil**:  
+  - React Hook Form veya basit bir form yönetimi yapısı.  
+  - Veri kaynağı: test verileri veya gerçek veritabanı (isteğe bağlı).  
+  - GSAP ile hover & click transition animasyonları.
+
+---
+
+### 4. **3D Görsel/Ara Geçiş (Interactive Globe veya Sahne)**
+
+- **Amaç**: Görsel olarak siteye nefes aldırmak, aynı zamanda ana konuyu (dünyayı gezmek, uluslararası seyahat) vurgulamak.  
+- **İçerik & Animasyon**:  
+  - Orta boyutta bir sahne içerisinde dünya haritası veya popüler şehirlerin 3D silüetleri.  
+  - Kullanıcı tıklayarak/döndürerek kıtaları veya ülkeyi seçebilir.  
+- **Teknoloji**:  
+  - **Three.js** ile interaktif bir canvas.  
+  - Simple geometrilerle minimal, poligon tarzı bir küre.  
+  - Ülke seçimi yapıldığında ya da mouse hover durumunda ülke highlight.  
+- **Kullanıcıyı Yönlendirme**:  
+  - “Hangi ülkeye gitmek istiyorsun?”  
+  - Tıklanan ülke hakkında anında küçük bir tooltip vb.  
+- **Stil & Animasyon**:  
+  - Renkli, fütüristik gradientlerle kaplı poligon stili.  
+  - “Floating particles” efektiyle ortama derinlik eklenebilir.
+
+---
+
+### 5. **Nasıl Çalışır? (Adım Adım Süreç)**
+
+- **Amaç**: Kullanıcılar vize başvuru sürecinin aşamalarını hızlıca kavrasın.  
+- **İçerik Önerisi**:  
+  1. Adım: Ülke ve vize türü seçimi  
+  2. Adım: Gerekli belgeleri hazırla  
+  3. Adım: Danışman onayı ve form doldurma  
+  4. Adım: Randevu planlama  
+  5. Adım: Başvuru takibi  
+- **Animasyon & Stil**:  
+  - Bu adımları temsil eden 3D/2D ikonlar veya mini Lottie animasyonları.  
+  - Her adımda “dikey timeline” veya “yatay süreç çubuğu” tasarımı.  
+  - Scroll ile görünür oldukça “slide-in” veya “reveal” animasyonları.
+
+---
+
+### 6. **Referanslar / Başarı Hikayeleri (Testimonials)**
+
+- **Amaç**: Kullanıcı güvenini artırmak, platformun gerçek insanlara fayda sağladığını kanıtlamak.  
+- **İçerik**:  
+  - Gerçek veya dummy kullanıcı yorumları (“Vizem 3 günde onaylandı!”, “Belgeler konusunda çok yardımcı oldular.” vb.)  
+  - Müşteri isimleri, fotoğrafları veya avatar/ikon (gizlilik kaygıları varsa).  
+- **Animasyon**:  
+  - Kartların otomatik kaydırıldığı bir slider (React Swiper veya benzeri).  
+  - Hover ile kart büyümesi, GSAP fade-in/out efektleri.  
+- **Tasarım**:  
+  - Arka planı yumuşak renkli veya degrade geçişli tutarak yorumları öne çıkar.  
+
+---
+
+### 7. **CTA (Call to Action) Bölümü**
+
+- **Amaç**: Kullanıcıyı “danışmanlık almak”, “ücretsiz hesap oluşturmak” veya “vize karşılaştırması yapmak” gibi bir aksiyona yönlendirmek.  
+- **Metin Önerisi**:  
+  - “Tüm dünya sana çok daha yakın! Vize sürecini bugün başlat.”  
+  - Buton: “Ücretsiz Başla” / “Hemen Danışmanlık Al”  
+- **Animasyon**:  
+  - Buton hover’da hafif titreşim veya parıltı efekti.  
+  - Arka planda 3D veya Lottie yıldız/parçacık efekti akarak dikkat çekici bir atmosfer yaratılabilir.
+
+---
+
+### 8. **Sıkça Sorulan Sorular (FAQ)**
+
+- **Amaç**: Kullanıcıların en sık sorduğu soruları hızlıca cevaplamak, destek ekibi yükünü azaltmak.  
+- **İçerik**:  
+  - 5-6 soruluk bir liste (Örn. “Vize ne kadar sürede çıkar?”, “Hangi belgeler gerekiyor?”, “Danışmanlık ücreti ne kadar?” vb.).  
+- **Teknoloji & Animasyon**:  
+  - Accordion yapısı (GSAP veya basit CSS transition ile).  
+  - Aşağı doğru açılan cevap animasyonu.  
+  - Düz ve temiz bir tipografi.
+
+---
+
+### 9. **Footer**
+
+- **Amaç**: Site haritası, sosyal medya linkleri, iletişim bilgileri, yasal metinler (Gizlilik, Kullanım Şartları) gibi temel unsurları barındırmak.  
+- **Tasarım**:  
+  - Minimal, sade bir arka plan rengi (site genelindeki ana renk paletine uyumlu).  
+  - Bölümler:  
+    - Hızlı linkler (Ana Sayfa, Hizmetler, Hakkımızda, İletişim, vs.)  
+    - Sosyal medya ikonları (animasyonlu hover efektli).  
+    - Haber bülteni (newsletter) abonelik formu.  
+- **Ek Detay**:  
+  - Footer’da küçük bir “© 2025 [Marka Adı]” şeklinde telif bildirimi.
+
+---
+
+## TEKNİK DETAY ÖZETİ
+
+1. **Front-End Çatısı**:  
+   - React / Next.js  
+   - Tailwind CSS (hızlı prototipleme) veya Styled Components (daha esnek tasarım)  
+2. **3D ve Animasyon**:  
+   - Three.js veya Babylon.js (3D globe, interaktif sahneler)  
+   - GSAP / Framer Motion / Lottie (kart animasyonları, icon animasyonları, scroll reveal efektleri)  
+3. **Performans ve SEO**:  
+   - Next.js kullanıyorsanız sayfaların SSR (Server Side Rendering) ile SEO avantajı.  
+   - Görseller ve 3D modeller optimize edilmeli (GLTF, Draco compression vb.).  
+   - Lighthouse ve PageSpeed Insights testlerine dikkat edin.  
+4. **Erişilebilirlik (Accessibility)**:  
+   - Metinlerin yeterli kontrasta sahip olması  
+   - Animasyonların aşırı göz almaması (hareketli öğelerin kapatılabilir olması)  
+   - Form alanlarında etiket kullanımı (label)  
+5. **Responsive Tasarım**:  
+   - Mobilde 3D objeler basitleştirilebilir veya devre dışı bırakılabilir.  
+   - Kart yapıları mobilde dikey düzende gösterilirken masaüstünde yatay grid olur.  
+
+---
+
+> **Not:** Prompt içeriğinde geçen her şeyi bir kerede uygulamak zorunlu değildir. Bu detaylı yönergeler, nihai projede kullanabileceğiniz farklı ilham ve fikirler sunar.
