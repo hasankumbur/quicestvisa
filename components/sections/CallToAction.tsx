@@ -1,8 +1,11 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 export default function CallToAction() {
+  const { t } = useLanguage()
+
   const scrollToContactForm = () => {
     const contactForm = document.getElementById('contact-form')
     if (contactForm) {
@@ -11,7 +14,7 @@ export default function CallToAction() {
   }
 
   return (
-    <section className="relative py-32 bg-gradient-to-b from-[#075985] to-[#0c4a6e] overflow-hidden">
+    <section className="py-20 bg-gradient-to-br from-primary-900 via-primary-800 to-primary-900 relative overflow-hidden">
       {/* Animated Background */}
       <motion.div 
         initial={{ opacity: 0 }}
@@ -22,19 +25,19 @@ export default function CallToAction() {
         <motion.div 
           animate={{ 
             scale: [1, 1.2, 1],
-            opacity: [0.2, 0.1, 0.2] 
+            opacity: [0.1, 0.05, 0.1] 
           }}
           transition={{ 
             duration: 8,
             repeat: Infinity,
             ease: "easeInOut" 
           }}
-          className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#d946ef]/10 rounded-full filter blur-[100px]"
+          className="absolute top-0 left-0 w-[500px] h-[500px] bg-secondary-500/10 rounded-full filter blur-[100px]"
         />
         <motion.div 
           animate={{ 
             scale: [1, 1.1, 1],
-            opacity: [0.1, 0.2, 0.1] 
+            opacity: [0.05, 0.1, 0.05] 
           }}
           transition={{ 
             duration: 10,
@@ -42,7 +45,7 @@ export default function CallToAction() {
             ease: "easeInOut",
             delay: 1
           }}
-          className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[#0ea5e9]/10 rounded-full filter blur-[100px]"
+          className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-primary-500/10 rounded-full filter blur-[100px]"
         />
       </motion.div>
 
@@ -54,16 +57,16 @@ export default function CallToAction() {
             transition={{ duration: 0.8 }}
             className="text-4xl md:text-5xl font-display font-bold text-white mb-6 drop-shadow-lg"
           >
-            Vize Ofislerine Özel Bot Çözümü
+            {t.callToAction.title}
           </motion.h2>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl text-white/90 mb-12 drop-shadow"
+            className="text-xl text-white/80 mb-12 drop-shadow"
           >
-            Manuel randevu takibi ve kaçırılan fırsatlar artık geride kalsın. Bot sistemimiz ile randevuları otomatik olarak alın, işinizi büyütün.
+            {t.callToAction.description}
           </motion.p>
 
           <motion.div
@@ -76,9 +79,9 @@ export default function CallToAction() {
               onClick={scrollToContactForm}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="bg-white text-[#0c4a6e] hover:bg-white/90 font-bold py-3 px-8 rounded-lg text-lg transition-colors duration-300 shadow-lg hover:shadow-xl"
+              className="bg-secondary-500 hover:bg-secondary-400 text-white font-bold py-3 px-8 rounded-lg text-lg transition-colors duration-300 shadow-lg hover:shadow-xl"
             >
-              Detaylı Bilgi Al
+              {t.callToAction.buttons.details}
             </motion.button>
             <motion.button
               onClick={scrollToContactForm}
@@ -86,7 +89,7 @@ export default function CallToAction() {
               whileTap={{ scale: 0.98 }}
               className="border-2 border-white text-white hover:bg-white/10 font-bold py-3 px-8 rounded-lg text-lg transition-colors duration-300"
             >
-              Demo Talep Et
+              {t.callToAction.buttons.demo}
             </motion.button>
           </motion.div>
         </div>

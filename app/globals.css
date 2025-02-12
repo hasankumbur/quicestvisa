@@ -7,9 +7,26 @@
   --background-rgb: 255, 255, 255;
 }
 
+html {
+  min-height: 100vh;
+  background: rgb(17, 24, 39); /* primary-900 */
+}
+
 body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+  width: 100%;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-y pinch-zoom;
+  overscroll-behavior-y: contain;
   color: rgb(var(--foreground-rgb));
-  background: rgb(var(--background-rgb));
+  background: rgb(17, 24, 39); /* primary-900 */
+}
+
+#__next {
+  min-height: 100vh;
+  background: rgb(17, 24, 39); /* primary-900 */
 }
 
 .container {

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800">
+    <rect width="1200" height="800" fill="#E30A17"/>
+    <circle cx="425" cy="400" r="200" fill="white"/>
+    <circle cx="475" cy="400" r="160" fill="#E30A17"/>
+    <polygon 
+        points="
+            589.722,376.666 
+            596.089,401.333 
+            622.276,401.333 
+            601.093,416.667 
+            607.46,441.334 
+            589.722,426 
+            571.984,441.334 
+            578.351,416.667 
+            557.168,401.333 
+            583.355,401.333"
+        fill="white"
+        transform="translate(60, -15)"
+    />
+</svg> 
